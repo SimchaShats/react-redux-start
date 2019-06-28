@@ -7,19 +7,15 @@ import PropTypes from 'prop-types';
 const FirstPage = React.memo(({ testMeCount }) => {
   const dispatch = useDispatch();
 
+  // Example of memoization (good to read: https://kentcdodds.com/blog/usememo-and-usecallback)
   const incrementTestMeCounter = useCallback(
     () => dispatch(addTestMeCount({ count: testMeCount + 1 })),
     [dispatch, testMeCount]
   );
 
-  const goToPageFirst = useCallback(
-    () => goToPage({ page: 'second' }),
-    []
-  );
-
   return <Fragment>
     <button onClick={ incrementTestMeCounter }>Test me +1 ({ testMeCount })</button>
-    <button onClick={ goToPageFirst }>Go to Second Page</button>
+    <button onClick={ () => goToPage({ page: 'second' }) }>Go to Second Page</button>
   </Fragment>
 });
 
