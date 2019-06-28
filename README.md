@@ -1,10 +1,10 @@
-###Quick start app with:
+### Quick start app with:
 
 - React
 - Redux
 - Immutable
 
-###It's using next libs:
+### It's using next libs:
 - create-react-app
 - redux-action-router
 - redux-thunk
