@@ -1,4 +1,4 @@
-### Quick start app with:
+### Quick start with:
 
 - React
 - Redux
@@ -11,3 +11,6 @@
 - immutable
 - redux-devtools-extension
 
+Good start for interviews, test apps, small apps...
+
+Any ideas, improvements and others thoughts are welcome!
