@@ -15,14 +15,14 @@ class SecondPage extends PureComponent {
     dispatch(addTestMeCount({ count: testMeCount + 10 }));
   };
 
-  goToPageSecond = () => goToPage({ page: 'first' })
+  goToPageFirst = () => goToPage({ page: 'first' })
 
   render() {
     const { testMeCount } = this.props;
     return (
       <Fragment>
         <button onClick={ this.incrementTestMeCounter }>Test me +10 ({ testMeCount })</button>
-        <button onClick={ this.goToPageSecond }>Go to First Page</button>
+        <button onClick={ this.goToPageFirst }>Go to First Page</button>
       </Fragment>
     );
   }
