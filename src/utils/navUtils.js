@@ -1,3 +1,15 @@
-export const goToPage = ({ page, count = 0 }) => {
-  window.location.assign(`#/page/${page}/${count}`);
+
+const buildURL = ({ page, inc, init }) => {
+  let url = `#/${page}`;
+  if (page === 'edit' && inc) {
+    return url += `/${inc}`;
+  }
+  if (page === 'review' && init) {
+    return url += `/${init}`;
+  }
+  return url;
+};
+
+export const goToPage = ({ page, inc, init }) => {
+  window.location.assign(buildURL({ page, inc, init }));
 };

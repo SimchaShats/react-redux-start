@@ -1,7 +1,7 @@
-import * as first from './First/first.js';
-import * as second from './Second/second.js';
+import { routes as editRoutes } from './Edit/edit.js';
+import { routes as reviewRoutes } from './Review/review.js';
 
 export const routes = {
-  ...first.routes,
-  ...second.routes,
+  ...editRoutes,
+  ...reviewRoutes,
 };

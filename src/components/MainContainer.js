@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import First from './First/FirstPage';
-import Second from './Second/SecondPage';
+import EditPage from './Edit/EditPage';
+import ReviewPage from './Review/ReviewPage';
 import PropTypes from 'prop-types';
 
 function MainContainer({ page }) {
   return (
-    <div className="App">
-      { page === 'first' && <First/> }
-      { page === 'second' && <Second/> }
+    <div className='App'>
+      { page === 'edit' && <EditPage/> }
+      { page === 'review' && <ReviewPage/> }
     </div>
   );
 }
@@ -18,7 +18,7 @@ MainContainer.propTypes = {
 };
 
 const mapStateToProps = state =>({
-  page: state.getIn(['core', 'nav', 'page'], 'first'),
+  page: state.getIn(['core', 'nav', 'page']) || 'edit',
 });
 
 export default connect(

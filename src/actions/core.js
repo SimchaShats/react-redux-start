@@ -3,8 +3,14 @@ export const addTestMeCount = ({ count }) => ({
   count,
 });
 
-export const navToPage = ({ count, page }) => ({
-  type: 'NAV_TO_PAGE',
-  count,
+export const navToEdit = ({ inc, page }) => ({
+  type: 'NAV_TO_EDIT',
   page,
+  inc,
+});
+
+export const navToReview = ({ count, page }) => ({
+  type: 'NAV_TO_REVIEW',
+  page,
+  count,
 });
